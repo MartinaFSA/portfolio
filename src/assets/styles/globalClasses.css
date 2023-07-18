@@ -1,0 +1,128 @@
+@font-face {
+  font-family: "Michega";
+  src: local("Michega"),
+   url(./assets/fonts/michega.ttf) format("truetype");
+}
+
+/*Global*/
+:root {
+    --white: #E5D8D8;
+    --accentColor: #1FAF47;
+    --figure_borders: 1px solid #e5d8d8a6;
+    --accentFont: Michega;
+    --mainFont: Noto Serif;
+    --black: #171717;
+}
+* {
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    vertical-align: baseline;
+}
+body {
+    background-color: var(--black);
+    width: 100vw;
+    overflow-x: hidden;
+}
+main {
+    padding: 90px 5vw 0px;
+}
+a, button, img {
+    text-decoration: none;
+    color: var(--white);
+    transition: all .4s;
+}
+h1 {
+    color: var(--white);
+    font-family: var(--accentFont);
+    font-size: 9vw;
+    font-weight: 400;
+    letter-spacing: -2.6px;
+    text-transform: uppercase;
+    padding: 0%;
+    margin: 0%;
+}
+h2 {
+    color: var(--accentColor);
+    font-family: var(--mainFont);
+    font-size: 6vw;
+    font-weight: 200;
+    letter-spacing: -2.4px;
+}
+h3 {
+    color: var(--white);
+    text-align: center;
+    font-weight: 400;
+    font-family: var(--accentFont);
+    letter-spacing: -1.6px;
+    text-transform: uppercase;
+}
+
+/*Navigation bar*/
+header {
+    width: 97vw;
+    position: fixed;
+    margin: 0%;
+    padding: 0%;
+    z-index: 10;
+}
+nav {
+    position: sticky;
+    top: 0px;
+    width: 100%;
+    padding: 30px 5vw;
+    margin: 0%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: #171717c9;
+    backdrop-filter: blur(3px);
+}
+nav div:nth-of-type(2n), nav button {
+    width: max-content;
+    color: #918f8f;
+    display: inline-flex;
+}
+#ctnNavLinks {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    color: var(--white);
+    margin-left: 10%;
+
+}
+nav a, nav button {
+    text-align: center;
+    font-weight: 300;
+    font-family: var(--mainFont);
+    font-size: 1.4rem;
+    letter-spacing: -0.6px;
+    text-transform: capitalize;
+    width: 33%;
+} 
+nav a:active, nav a:hover, nav button:hover {
+    color: var(--accentColor);
+    text-decoration-line: underline;
+}
+nav button {
+    background-color: transparent;
+    border: none;
+    width: auto;
+    height: auto;
+}
+
+.accent {
+    color: var(--accentColor);
+}
+
+@media (max-width: 1000px) {
+    h3 {
+        font-size: 2.5rem;
+    }
+}
+@media (min-width: 1000px) {
+    h3 {
+        font-size: 4vw;
+    }
+}
