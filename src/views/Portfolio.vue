@@ -1,28 +1,27 @@
 <template>
-    <main>
-        <section id="inicio" class="positionRelative">
+    <main id="inicio">
+        <section class="positionRelative">
             <div class="positionRelative">
-                <h1>Martina Fernandez</h1>
-                <h1 id="name_indentation">Suarez Anzorena</h1>
-                <img class="star" id="landing_star" src="src/assets/img/star.svg">
+                <h1 class="slideInRight">Martina Fernandez</h1>
+                <h1 id="name_indentation" class="slideInLeft">Suarez Anzorena</h1>
+                <img class="star focus-in" id="landing_star" src="/src/assets/img/star.svg">
             </div>
-            <h2>Desarrolladora Web</h2>
-            <div id="ctn_myImg">
-                <img id="myImg" src="src/assets/img/o.jpg" alt="Portrait picture of Martina">
+            <h2 class="slideInRight">Desarrolladora Web</h2>
+            <div id="ctn_myImg" class="focus-in">
+                <div id="bkg_gradient"></div>
+                <img id="myImg" src="/src/assets/img/yo.jpg" alt="Portrait picture of Martina">
             </div>
-            <div class="positionRelative">
+            <div class="positionRelative focus-in">
                 <div class="arc" id="landing_firstArc"></div>
                 <div class="arc" id="landing_sndArc"></div>
                 <div class="line" id="landing_line"></div>
                 <div class="halfCircle" id="landing_halfCircle"></div>
-
-                <div id="bkg_gradient"></div>
             </div>
         </section>
 
         <section id="about">
             <h3>Sobre mí</h3>
-            <div>
+            <div class="positionRelative">
                 <div>
                     <div class="about_group">
                         <p class="about_number">01</p>
@@ -53,41 +52,33 @@
                 <div id="ctn_aboutPhrase">
                     <p id="about_phrase">Para saber más ingresá acá</p>
                     <div>
-                        <a href="">CV</a>
-                        <a href="https://github.com/MartinaFSA">GitHub</a>
-                        <a href="https://www.linkedin.com/in/martina-fernandez-suarez-anzorena/">LinkedIn</a>
+                        <a href="" target="_blank">CV</a> <!--https://www.w3schools.com/howto/howto_js_snackbar.asp-->
+                        <a href="https://github.com/MartinaFSA" target="_blank">GitHub</a>
+                        <a href="https://www.linkedin.com/in/martina-fernandez-suarez-anzorena/" target="_blank">LinkedIn</a>
                     </div>
+                </div>
+                <div id="about_ctnFigures">
+                    <img class="star" id="about_star" src="/src/assets/img/star.svg">
+                    <div class="halfCircle" id="about_halfCircle"></div>
+                    <div class="fullCircle" id="about_firstFullCircle"></div>
+                    <div class="fullCircle" id="about_sndFullCircle"></div>
                 </div>
             </div>
         </section>
         <section id="proyectos">
             <h3>Proyectos</h3>
             <section id="content-archive" role="main">
-                <div class="thumbnail accent" v-for="(project, index) in projects" :key="index">
-                    <a :href="project.link" rel="bookmark">
-                        <img :src="'../assets/img/projects/' + project.img" class="" alt="ASDFGH">
-                    </a>
-                    <div class="hover">
-                        <a href="" rel="bookmark"></a>
-                        <ul v-for="(tag, index) in project.tags" :key="index" class="tags">
-                            <li>{{ tag }}</li>
-                        </ul>
-                        <a href="" :title="project.title" rel="bookmark">
-                            <span><img src="../assets/img/external-link.svg" alt="Redirect to new page"></span><p class="project_title">{{project.title}}</p>
+                <div class="thumbnail" v-for="(project, index) in projects" :key="index">
+                    <div class="positionRelative">
+                        <a :href="project.link" rel="bookmark">
+                            <div></div>
+                            <img :src="'/src/assets/img/projects/' + project.img" alt="ASDFGH" loading="lazy">
                         </a>
                     </div>
-                </div>
-                <div class="thumbnail accent" v-for="(project, index) in projects" :key="index">
-                    <a :href="project.link" rel="bookmark">
-                        <img src="https://www.also-online.com/wp-content/uploads/2022/09/logo-explorations-2048x1459.png" class="" alt="ASDFGH">
-                    </a>
                     <div class="hover">
-                        <a href="" rel="bookmark"></a>
-                        <ul v-for="(tag, index) in project.tags" :key="index" class="tags">
-                            <li>{{ tag }}</li>
-                        </ul>
                         <a href="" :title="project.title" rel="bookmark">
-                            <span><img src="../assets/img/external-link.svg" alt="Redirect to new page"></span><p class="project_title">{{project.title}}</p>
+                            <p class="project_title">{{project.title}}</p>
+                            <p class="tags">{{ project.tag }}</p>
                         </a>
                     </div>
                 </div>
@@ -122,24 +113,31 @@
                 projects: {
                     AvatarGenerator: {
                         img: 'avatarGenerator/thumbnail.png',
-                        tags: ['Web'],
+                        tag: 'Diseño, ilustración y desarrollo',
                         title: 'Avatar Generator',
-                        link: 'a',
-                        description: 'Esta aplicación web es un generador de avatares personalizados. Los usuarios pueden seleccionar el color de piel, ojos y labios del personaje, su peinado y el fondo o seleccionar rasgos al azar. Los personajes pueden ser descargados en formato PNG con un solo click.'
+                        link: '',
+                        description: 'Esta aplicación web es un generador de avatares personalizados. Los usuarios pueden seleccionar el color de piel, ojos y labios del personaje, su peinado y el fondo o utilizar el seleccionador de rasgos aleatorios. Los personajes pueden ser descargados en formato PNG con un solo click.'
                     },
                     MercadoLibre: {
-                        img: 'avatarGenerator/thumbnail.png',
-                        tags: ['Web'],
+                        img: 'mercadoLibre/thumbnail.png',
+                        tag: 'Development',
                         title: 'Copia de Mercado Libre',
-                        link: 'b',
+                        link: '',
                         description: 'Maquetado Front-End de la página de inicio de Mercado Libre Argentina.'
                     },
                     AvatarGenerator2: {
-                        img: 'avatarGenerator/thumbnail.png',
-                        tags: ['Web'],
-                        title: 'Avatar Generator2',
-                        link: 'c',
-                        description: 'Esta ap2afslicación web es un generador de avatares personalizados. Los usuarios pueden seleccionar el color de piel, ojos y labios del personaje, su peinado y el fondo o seleccionar rasgos al azar. Los personajes pueden ser descargados en formato PNG con un solo click.'
+                        img: 'typoAttack/thumbnail.png',
+                        tag: 'Diseño y desarrollo',
+                        title: 'TypoAttack',
+                        link: '',
+                        description: 'Esta web es un display interactivo de una puesta tipográfica inspirada en {equis tema}'
+                    },
+                    AvatarGenerator3: {
+                        img: 'journalApp/thumbnail.png',
+                        tag: 'Diseño y desarrollo',
+                        title: 'Journal',
+                        link: '',
+                        description: 'Diario web'
                     },
                 }
             }
