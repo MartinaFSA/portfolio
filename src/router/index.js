@@ -8,12 +8,17 @@ const router = createRouter({
       path: '/',
       name: 'portfolio',
       component: Portfolio
-    }/*,
+    },
     {
-      path: '/about',
-      name: 'about',
+      path: '/project/:projectName',
+      name: 'project',
       component: () => import('../views/AboutView.vue')
-    }*/
+    },
+    {
+      path: '/:pathMatch(.*)*',
+      name: 'NotFound',
+      component:  () => import('../views/NotFound.vue')
+    },
   ]
 })
 

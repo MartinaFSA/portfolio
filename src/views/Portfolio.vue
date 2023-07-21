@@ -70,13 +70,13 @@
             <section id="content-archive" role="main">
                 <div class="thumbnail" v-for="(project, index) in projects" :key="index">
                     <div class="positionRelative">
-                        <a :href="project.link" rel="bookmark">
+                        <a :href="'project/' + project.objectName" rel="bookmark">
                             <div></div>
                             <img :src="'/src/assets/img/projects/' + project.img" alt="ASDFGH" loading="lazy">
                         </a>
                     </div>
                     <div class="hover">
-                        <a href="" :title="project.title" rel="bookmark">
+                        <a :href="'project/' + project.objectName" :title="project.title" rel="bookmark">
                             <p class="project_title">{{project.title}}</p>
                             <p class="tags">{{ project.tag }}</p>
                         </a>
@@ -89,6 +89,7 @@
 </template>
 <script>
     import Contact from '../components/Contact.vue';
+    import projectsJson from '../assets/projectsData.json';
     export default {
         name: 'Home',
         components: {
@@ -107,39 +108,10 @@
                             'Migración de base de datos'],
                         tasks: ['Web accesibility improvementsb', 'Development of new features', 'Bug fixes',
                             'Adapt code to other programming languages','Maintenaince of applications, servers and databases',
-                            'Database migration']
+                            'Database migration']                        
                     }
                 },
-                projects: {
-                    AvatarGenerator: {
-                        img: 'avatarGenerator/thumbnail.png',
-                        tag: 'Diseño, ilustración y desarrollo',
-                        title: 'Avatar Generator',
-                        link: '',
-                        description: 'Esta aplicación web es un generador de avatares personalizados. Los usuarios pueden seleccionar el color de piel, ojos y labios del personaje, su peinado y el fondo o utilizar el seleccionador de rasgos aleatorios. Los personajes pueden ser descargados en formato PNG con un solo click.'
-                    },
-                    MercadoLibre: {
-                        img: 'mercadoLibre/thumbnail.png',
-                        tag: 'Development',
-                        title: 'Copia de Mercado Libre',
-                        link: '',
-                        description: 'Maquetado Front-End de la página de inicio de Mercado Libre Argentina.'
-                    },
-                    AvatarGenerator2: {
-                        img: 'typoAttack/thumbnail.png',
-                        tag: 'Diseño y desarrollo',
-                        title: 'TypoAttack',
-                        link: '',
-                        description: 'Esta web es un display interactivo de una puesta tipográfica inspirada en {equis tema}'
-                    },
-                    AvatarGenerator3: {
-                        img: 'journalApp/thumbnail.png',
-                        tag: 'Diseño y desarrollo',
-                        title: 'Journal',
-                        link: '',
-                        description: 'Diario web'
-                    },
-                }
+                projects: projectsJson
             }
         },
         methods: {
