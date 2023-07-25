@@ -3,7 +3,6 @@ import { resolve } from 'path'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 
-// https://vitejs.dev/config/
 export default defineConfig({
   base: '/portfolio/',
   plugins: [
@@ -17,7 +16,7 @@ export default defineConfig({
   build: {
     rollupOptions: {
       input: {
-        main: './index.html'
+        main: resolve(__dirname, 'index.html')
       },
       external: ['vue'],
       output: {
