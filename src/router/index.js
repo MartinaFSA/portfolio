@@ -12,7 +12,12 @@ const router = createRouter({
     {
       path: '/project/:projectName',
       name: 'project',
-      component: () => import('../views/AboutView.vue')
+      component: () => import('../views/Project.vue')
+    },
+    {
+      path: '/surprise',
+      name: 'Surprise',
+      component:  () => import('../views/Surprise.vue')
     },
     {
       path: '/:pathMatch(.*)*',

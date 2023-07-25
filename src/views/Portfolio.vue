@@ -24,21 +24,21 @@
             <div class="positionRelative">
                 <div>
                     <div class="about_group">
-                        <p class="about_number">01</p>
-                        <span class="about_title">Quién soy?</span>
+                        <p class="big_green_number">01</p>
+                        <span class="title_afterNumber">Quién soy?</span>
                         <p class="about_text">Highly adaptable Web Developer with a passion for learning new technologies. I have experience in a range of programming languages including HTML, CSS, JavaScript, PHP, React and Vue. In addition to those skills, I'm well-versed in Git, GitHub and MySQL.</p>
                     </div>
                     <div class="about_group">
-                        <p class="about_number">02</p>
-                        <span class="about_title">Cuáles son mis skills?</span>
+                        <p class="big_green_number">02</p>
+                        <span class="title_afterNumber">Cuáles son mis skills?</span>
                         <p class="about_text">Maquetado front-end con <span class="accent">HTML</span> y <span class="accent">CSS</span> Programación web con <span class="accent">JavaScript</span>, <span class="accent">PHP</span>, <span class="accent">React</span> y <span class="accent">Vue</span>
                             Manejo y mantención de bases de datos con <span class="accent">MySQL</span> y <span class="accent">PostgreSQL</span>
                             + Prototipado con <span class="accent">Figma</span>
                             + <span class="accent">Inglés</span> profesional</p>
                     </div>
                     <div class="about_group">
-                        <p class="about_number">03</p>
-                        <span class="about_title">Cuál es mi experiencia laboral?</span>
+                        <p class="big_green_number">03</p>
+                        <span class="title_afterNumber">Cuál es mi experiencia laboral?</span>
                         <div v-for="(experience, index) in experiences" :key="index" class="about_text">
                             <p class="about_text_company">{{experience.company}} ({{calculateTotalWorked(index)}})</p>
                             <p class="itemTitle">{{experience.jobTitle}}</p>
@@ -72,7 +72,7 @@
                     <div class="positionRelative">
                         <a :href="'project/' + project.objectName" rel="bookmark">
                             <div></div>
-                            <img :src="'/src/assets/img/projects/' + project.img" alt="ASDFGH" loading="lazy">
+                            <img :src="'/src/assets/img/projects/' + project.img" alt="" loading="lazy">
                         </a>
                     </div>
                     <div class="hover">

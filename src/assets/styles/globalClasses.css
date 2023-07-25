@@ -12,6 +12,7 @@
     --accentFont: Michega;
     --mainFont: Noto Serif;
     --black: #171717;
+    --panko: 187, 174, 163;
 }
 * {
     margin: 0;
@@ -22,6 +23,7 @@
 html {
     scroll-behavior: smooth;
 }
+
 * {
     scrollbar-width: thin;
     scrollbar-color: var(--black);
@@ -48,6 +50,7 @@ body {
     background-color: var(--black);
     width: 100vw;
     overflow-x: hidden;
+    position: relative;
 }
 main {
     padding: 90px 5vw 0px;
@@ -139,14 +142,43 @@ a:hover, .accent, button:hover {
     color: var(--accentColor);
 }
 
+
+.big_green_number {
+    display: inline-block;
+    color: var(--accentColor);
+    font-weight: 400;
+    font-family: var(--accentFont);
+    letter-spacing: -0.913px;
+}
+.title_afterNumber {
+    color: var(--white);
+    margin-left: 10px;
+    font-weight: 400;
+    font-family: var(--accentFont);
+    line-height: 20px;
+    letter-spacing: -1.05px;
+}
+
 @media (max-width: 1000px) {
     h3 {
         font-size: 2.5rem;
+    }
+    .big_green_number {
+        font-size: 2rem;
+    }
+    .title_afterNumber {
+        font-size:1.8rem;
     }
 }
 @media (min-width: 1000px) {
     h3 {
         font-size: 4vw;
+    }
+    .big_green_number {
+        font-size: 2.5rem;
+    }
+    .title_afterNumber {
+        font-size: 2.2rem;
     }
 }
 

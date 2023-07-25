@@ -1,7 +1,7 @@
 <template>
-    <footer class="positionRelative">
+    <footer class="positionRelative" id="contacto">
         <div id="footer_firstLine">
-            <a @click="openBonus()" aria-label="Link en forma de cara sonriente">;-)</a>
+            <a href="/portfolio/surprise" aria-label="Link en forma de cara sonriente">;-)</a>
             <p>Martina Fernandez Suarez Anzorena</p>
         </div>
         <div class="footer_social-list">
@@ -43,12 +43,7 @@
 
 <script>
     export default {
-        name: 'Contact',
-        methods: {
-            openBonus: function() {
-                alert('hehe');
-            }
-        }
+        name: 'Contact'
     }
 </script>
 

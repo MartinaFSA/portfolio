@@ -86,23 +86,6 @@ h2 {
     color: var(--white);
     margin-bottom: 40px;
 }
-.about_number {
-    display: inline-block;
-    color: var(--accentColor);
-    font-weight: 400;
-    font-family: var(--accentFont);
-    font-size: 2.5rem;
-    letter-spacing: -0.913px;
-}
-.about_title {
-    color: var(--white);
-    margin-left: 10px;
-    font-weight: 400;
-    font-family: var(--accentFont);
-    font-size: 2.2rem;
-    line-height: 20px;
-    letter-spacing: -1.05px;
-}
 .about_text {
     color: var(--white);
     margin-left: 17%;
@@ -189,7 +172,6 @@ h2 {
     z-index: 6;
     width: 100%;
     height: calc(100% - 3px);
-    /*background: linear-gradient(33deg, rgba(0, 0, 0, 0.60) 0%, rgba(0, 0, 0, 0.00) 100%);*/
 }
 .thumbnail .hover {
     margin-top: 5px;
@@ -206,9 +188,12 @@ h2 {
 .thumbnail .hover a p:first-of-type {
     font-family: var(--accentFont);
 }
-#content-archive .thumbnail:hover .hover a, .thumbnail:hover a:first-of-type > div{
+.thumbnail:hover .hover a, .thumbnail:hover a:first-of-type > div{
     opacity: 1;
     color: var(--white);
+}
+.thumbnail:hover img {
+    box-shadow: 0px 0px 40px -10px rgba(216, 216, 219, 0.377);
 }
 .tags {
     font-size: 1.3em;

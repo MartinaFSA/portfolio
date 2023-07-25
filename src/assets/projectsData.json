@@ -1,38 +1,20 @@
 {
     "AvatarGenerator": {
         "img": "avatarGenerator/avatarGenerator_thumbnail.png",
-        "tag": "Diseño, ilustración y desarrollo",
+        "tag": "Diseño y desarrollo",
         "title": "Avatar Generator",
         "link": "",
         "description": "Esta aplicación web es un generador de avatares personalizados. Los usuarios pueden seleccionar el color de piel, ojos y labios del personaje, su peinado y el fondo o utilizar el seleccionador de rasgos aleatorios. Los personajes pueden ser descargados en formato PNG con un solo click.",
         "objectName": "AvatarGenerator",
         "imagesPath": "avatarGenerator/avatarGenerator_"
     },
-    "MercadoLibre": {
-        "img": "mercadoLibre/thumbnail.png",
-        "tag": "Development",
-        "title": "Copia de Mercado Libre",
-        "link": "",
-        "description": "Maquetado Front-End de la página de inicio de Mercado Libre Argentina.",
-        "objectName": "MercadoLibre",
-        "imagesPath": "mercadoLibre/mercadoLibre_"
-    },
-    "AvatarGenerator2": {
+    "TypoAttack": {
         "img": "typoAttack/thumbnail.png",
-        "tag": "Diseño y desarrollo",
+        "tag": "Diseño y Development",
         "title": "TypoAttack",
         "link": "",
         "description": "Esta web es un display interactivo de una puesta tipográfica inspirada en {equis tema}",
-        "objectName": "AvatarGenerator2",
-        "imagesPath": "avatarGenerator/avatarGenerator_"
-    },
-    "AvatarGenerator3": {
-        "img": "typoAttaawck/thumbnail.png",
-        "tag": "Diseño y desarrollo",
-        "title": "TypoAewttack",
-        "link": "",
-        "description": "Esta wweeb es un display interactivo de una puesta tipográfica inspirada en {equis tema}",
-        "objectName": "AvatarGenewerator2",
-        "imagesPath": "avatarGenerator/avatarGenerator_"
+        "objectName": "TypoAttack",
+        "imagesPath": "typoAttack/typoAttack_"
     }
 }
