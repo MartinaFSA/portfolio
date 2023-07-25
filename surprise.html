@@ -2,7 +2,7 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8">
-    <link rel="icon" href="../favicon.ico">
+    <link rel="icon" href="/portfolio/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,7 +13,25 @@
     <link rel="stylesheet" href="/portfolio/assets/Surprise-131abd26.css">
   </head>
   <body>
-    <div id="app"></div>
+      <section class="focus-in">
+          <h1>¿Qué cuerpo celeste preferís?</h1>
+          <div>
+              <input value="moon" type="radio" name="planet" id="moon">
+              <label for="moon">Luna</label>
+  
+              <input value="mars" type="radio" name="planet" id="mars">
+              <label for="mars">Marte</label>
+  
+              <input value="sun" type="radio" name="planet" id="sun">
+              <label for="sun">Sol</label>
+  
+              <input value="jupiter" type="radio" name="planet" id="jupiter">
+              <label for="jupiter">Jupiter</label>
+          </div>
+      </section>
+      <section>
+          <canvas ref="canvas"></canvas>
+      </section>
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.min.js"></script>
   </body>
