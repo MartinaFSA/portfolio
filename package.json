@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "postbuild": "xcopy /s \".\/src\/assets\/img\/projects\" \".\/dist\/assets\/projects\" \/Y",
+    "postbuild": "xcopy /s \"./src/assets/img/projects\" \"./dist/assets/projects\" /Y",
     "preview": "vite preview",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
   },
