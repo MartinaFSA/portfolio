@@ -70,16 +70,16 @@
             <section id="content-archive" role="main">
                 <div class="thumbnail" v-for="(project, index) in projects" :key="index">
                     <div class="positionRelative">
-                        <a :href="'project/' + project.objectName" rel="bookmark">
+                        <RouterLink :to="'project/' + project.objectName" rel="bookmark">
                             <div></div>
                             <img :src="'/src/assets/img/projects/' + project.img" alt="" loading="lazy">
-                        </a>
+                        </RouterLink>
                     </div>
                     <div class="hover">
-                        <a :href="'project/' + project.objectName" :title="project.title" rel="bookmark">
+                        <RouterLink :to="'project/' + project.objectName" :title="project.title" rel="bookmark">
                             <p class="project_title">{{project.title}}</p>
                             <p class="tags">{{ project.tag }}</p>
-                        </a>
+                        </RouterLink>
                     </div>
                 </div>
             </section>
@@ -88,6 +88,7 @@
     </main>
 </template>
 <script>
+    import { RouterLink } from 'vue-router';
     import Contact from '../components/Contact.vue';
     import projectsJson from '../assets/projectsData.json';
     export default {
